@@ -10,7 +10,7 @@ weather.addEventListener('submit', (event) => {
     const area = search.value;
     para1.textContent = "Loading...";
     para2.textContent = "";
-    fetch('http://localhost:3000/weather?address=' +area).then((response) => {
+    fetch('/weather?address=' +area).then((response) => {
         response.json().then((data) => {
             if (data.Error) {
                 para1.textContent = data.Error;
