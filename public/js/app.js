@@ -1,3 +1,4 @@
+console.log("to check git");
 const weather = document.querySelector('form');
 const search = document.querySelector('input');
 const para1 = document.getElementById("para1");
