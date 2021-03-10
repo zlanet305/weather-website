@@ -8,7 +8,7 @@ const weather = (address, callback) => {
             }else if(response.body.error){
                 callback("Unable to find location", undefined);
             }else{
-                callback(undefined, `The temperature is ${response.body.current.temperature}. Today there is ${response.body.current.precip} precipitation for ${address}. Weather report says ${response.body.current.weather_descriptions}.`, `${response.body.current.weather_icons}` );
+                callback(undefined, `The temperature is ${response.body.current.temperature} but it feels  like ${response.body.current.feelslike}. Today there is ${response.body.current.precip} precipitation for ${address}. Weather report says ${response.body.current.weather_descriptions}.`, `${response.body.current.weather_icons}` );
             }
         })
 }
